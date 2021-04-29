@@ -1,0 +1,87 @@
+.video-carousel {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  .display-container {
+    flex: 1;
+    background-color: #fff;
+    margin-right: 16px;
+    overflow: hidden;
+    .display-track {
+      height: 100%;
+    }
+
+    .display-video {
+      height: 100%;
+      float: left;
+      position: relative;
+      //   opacity: 0;
+      //   transition: opacity 500ms ease 0s, visibility 500ms ease 0s;
+      display: none;
+      &.selected {
+        display: block;
+        // opacity: 1;
+      }
+
+      .video-des {
+        padding: 22px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .video-title {
+          font-size: 24px;
+          font-family: PingFangSC-Medium, PingFang SC;
+          font-weight: 500;
+          color: #262626;
+          line-height: 33px;
+          cursor: pointer;
+        }
+
+        .video-data {
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #999999;
+          min-width: 180px;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .carousel-list {
+    width: 240px;
+    .carousel-item {
+      width: 100%;
+      height: 140px;
+      margin-bottom: 16px;
+      cursor: pointer;
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      &-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      &.selected {
+        border: 4px solid #ffdb41;
+        position: relative;
+        .selected-arrow {
+          position: absolute;
+          left: -14px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-top: 8px solid transparent;
+          border-right: 10px solid #ffdb41;
+          border-bottom: 8px solid transparent;
+        }
+      }
+    }
+  }
+}
